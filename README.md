@@ -1,4 +1,4 @@
-# Should I Buy This Stock? 📈
+# Explain This 📈
 
 > **Archived project** — this is an early predecessor of my current trading-analysis platform (Kronos). It's preserved here as a working snapshot, not actively maintained.
 
