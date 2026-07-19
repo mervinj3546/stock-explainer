@@ -1,4 +1,4 @@
-# Explain This 📈
+# Stock Explainer 📈
 
 > **Archived project** — this is an early predecessor of my current trading-analysis platform (Kronos). It's preserved here as a working snapshot, not actively maintained.
 
