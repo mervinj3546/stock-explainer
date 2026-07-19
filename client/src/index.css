@@ -1,0 +1,335 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Professional Dark Theme Colors - Lighter & Less Depressing */
+  --background: #111418; /* Dark gray background instead of pure black */
+  --foreground: #FFFFFF; /* Pure white for headers */
+  --muted: #1E2227; /* Lighter card backgrounds for less depression */
+  --muted-foreground: #94A3B8; /* Muted gray for labels (slate-400) */
+  --popover: #1E2227;
+  --popover-foreground: #E5E7EB; /* Off-white for body text */
+  --card: #1E2227; /* Lighter card background */
+  --card-foreground: #E5E7EB; /* Off-white for card text */
+  --card-hover: #232831; /* Slightly lighter on hover */
+  --border: #2A2F36; /* Lighter border for card separation */
+  --input: #1E2227;
+  --primary: #2563EB; /* Blue primary CTA button */
+  --primary-foreground: #FFFFFF;
+  --primary-hover: #1E40AF; /* Blue-800 on hover */
+  --secondary: #1E2227;
+  --secondary-foreground: #E5E7EB;
+  --accent: #2563EB; /* Blue accent */
+  --accent-foreground: #FFFFFF;
+  --destructive: #F87171; /* Muted red */
+  --destructive-foreground: #FFFFFF;
+  --ring: #3B82F6; /* Blue-500 focus ring */
+  --radius: 0.5rem;
+  
+  /* Custom colors for the financial app - Muted tones */
+  --bullish: #34D399; /* Muted emerald-400 for stock data */
+  --bullish-hover: #10B981; /* Darker green on hover */
+  --bearish: #F87171; /* Muted rose-400 for stock data */
+  --neutral: #3B82F6; /* Blue neutral */
+  --neutral-hover: #2563EB; /* Darker blue on hover */
+  --slate-850: #1B1F24;
+  
+  /* Professional accent colors */
+  --accent-blue: #3B82F6;
+  --accent-purple: #8B5CF6;
+  --accent-teal: #14B8A6;
+  --accent-amber: #F59E0B;
+  --accent-rose: #F43F5E;
+  
+  /* Premium CTA colors */
+  --cta-primary: #2563EB; /* Blue primary */
+  --cta-hover: #1E40AF; /* Blue-800 on hover */
+  
+  /* Text hierarchy */
+  --text-primary: #FFFFFF; /* Headers */
+  --text-secondary: #E5E7EB; /* Body text */
+  --text-muted: #94A3B8; /* Muted text - lighter gray */
+  
+  /* New lighter design tokens */
+  --card-gradient-from: #1E2227;
+  --card-gradient-to: #181B20;
+  --section-divider: #2F343B;
+  --sidebar-card-bg: #1C1F23; /* Sidebar card background */
+}
+
+.dark {
+  /* Same professional color scheme for dark mode - Lighter & Less Depressing */
+  --background: #111418;
+  --foreground: #FFFFFF;
+  --muted: #1E2227;
+  --muted-foreground: #94A3B8;
+  --popover: #1E2227;
+  --popover-foreground: #E5E7EB;
+  --card: #1E2227;
+  --card-foreground: #E5E7EB;
+  --card-hover: #232831;
+  --border: #2A2F36;
+  --input: #1E2227;
+  --primary: #2563EB;
+  --primary-foreground: #FFFFFF;
+  --primary-hover: #1E40AF;
+  --secondary: #1E2227;
+  --secondary-foreground: #E5E7EB;
+  --accent: #2563EB;
+  --accent-foreground: #FFFFFF;
+  --destructive: #F87171;
+  --destructive-foreground: #FFFFFF;
+  --ring: #3B82F6;
+  --card-gradient-from: #1E2227;
+  --card-gradient-to: #181B20;
+  --section-divider: #2F343B;
+  --sidebar-card-bg: #1C1F23; /* Sidebar card background */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer utilities {
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient 8s ease infinite;
+  }
+  
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+  
+  .animate-bounce-subtle {
+    animation: bounce-subtle 0.3s ease-in-out;
+  }
+}
+
+@keyframes gradient {
+  0%, 100% {
+    background-position: left center;
+  }
+  50% {
+    background-position: right center;
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px hsl(142, 76%, 36%, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px hsl(142, 76%, 36%, 0.5);
+  }
+}
+
+@keyframes bounce-subtle {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+}
+
+.bg-slate-850 {
+  background-color: var(--slate-850);
+}
+
+/* Premium text colors */
+.text-primary {
+  color: var(--text-primary);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+/* Professional accent colors */
+.text-accent-blue {
+  color: var(--accent-blue);
+}
+
+.text-accent-purple {
+  color: var(--accent-purple);
+}
+
+.text-accent-teal {
+  color: var(--accent-teal);
+}
+
+.text-accent-amber {
+  color: var(--accent-amber);
+}
+
+.text-accent-rose {
+  color: var(--accent-rose);
+}
+
+/* Icon background colors */
+.bg-accent-blue {
+  background-color: var(--accent-blue);
+}
+
+.bg-accent-purple {
+  background-color: var(--accent-purple);
+}
+
+.bg-accent-teal {
+  background-color: var(--accent-teal);
+}
+
+.bg-accent-amber {
+  background-color: var(--accent-amber);
+}
+
+.bg-accent-rose {
+  background-color: var(--accent-rose);
+}
+
+/* Improved stock data colors */
+.text-bullish {
+  color: var(--bullish);
+}
+
+.text-bearish {
+  color: var(--bearish);
+}
+
+.bg-bullish {
+  background-color: var(--bullish);
+}
+
+.bg-bearish {
+  background-color: var(--bearish);
+}
+
+.hover\:bg-bullish-hover:hover {
+  background-color: var(--bullish-hover);
+}
+
+.border-bullish {
+  border-color: var(--bullish);
+}
+
+/* Premium CTA buttons */
+.btn-premium {
+  background-color: var(--cta-primary);
+  color: white;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn-premium:hover {
+  background-color: var(--cta-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+}
+
+.btn-premium:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--ring);
+}
+
+/* Secondary buttons */
+.btn-secondary {
+  background-color: transparent;
+  color: white;
+  border: 1px solid var(--ring);
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-secondary:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--ring);
+}
+
+/* Premium card styling - Redesigned for lighter, less depressing feel */
+.card-premium {
+  background: linear-gradient(to bottom, var(--card-gradient-from), var(--card-gradient-to));
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease-in-out;
+}
+
+.card-premium:hover {
+  background: linear-gradient(to bottom, var(--card-hover), var(--card-gradient-to));
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+  transform: translateY(-2px);
+}
+
+/* New lighter card variants */
+.card-light {
+  background: linear-gradient(to bottom, #1E2227, #181B20);
+  border: 1px solid #2A2F36;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.card-light:hover {
+  background: linear-gradient(to bottom, #232831, #181B20);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+  transform: translateY(-1px);
+}
+
+/* Section dividers for inside cards */
+.section-divider {
+  border-top: 1px solid var(--section-divider);
+}
+
+/* Updated text colors for lighter feel */
+.text-card-light {
+  color: #E5E7EB;
+}
+
+.text-muted-light {
+  color: #94A3B8;
+}
+
+/* Background utilities for the new design */
+.bg-card-gradient {
+  background: linear-gradient(to bottom, var(--card-gradient-from), var(--card-gradient-to));
+}
+
+.bg-card-light {
+  background-color: #1E2227;
+}
+
+.border-card-light {
+  border-color: #2A2F36;
+}
+
+.border-divider {
+  border-color: #2F343B;
+}
+
+/* Sidebar card background */
+.bg-sidebar-card {
+  background-color: var(--sidebar-card-bg);
+}
+
+/* Tab navigation utilities - No truncation allowed */
+.tab-no-truncate {
+  @apply whitespace-nowrap overflow-visible;
+  min-width: max-content;
+}
+
+.tab-container {
+  @apply flex items-center overflow-hidden;
+}

@@ -1,0 +1,93 @@
+Of course! Here’s the prompt only:
+
+⸻
+
+Build a modern, responsive web app UI called “Explain This Ticker,” designed exclusively in dark mode and styled with Tailwind CSS utility classes.
+	•	Login Page:
+	•	Centered form on a dark background
+	•	Fields:
+	•	Email input field
+	•	Password input field with visibility toggle
+	•	“Remember me” checkbox
+	•	“Login” button
+	•	Include link: “Forgot your password?”
+	•	Add social login buttons for:
+	•	Google
+	•	Twitter
+	•	Microsoft
+	•	Social login buttons should:
+	•	Be visually distinct with logos
+	•	Use Tailwind dark backgrounds and text:
+	•	Google: dark background with white text, border, Google logo
+	•	Twitter: bg-blue-500 with white text
+	•	Microsoft: dark background with white text, border, Microsoft logo
+	•	Rounded corners
+	•	Hover states:
+	•	Slight background darkening
+	•	Scale down slightly on click
+	•	Glow shadow on hover
+	•	Add subtle shadow effects
+	•	Animate buttons on click
+	•	Use icons from Heroicons, Font Awesome, or custom SVGs
+	•	Show tooltips on hover
+	•	Add an “OR” divider line between social login buttons and traditional login form
+	•	Dark background for page: #0f172a (Tailwind bg-slate-900)
+	•	Use Tailwind classes for:
+	•	Form spacing
+	•	Input fields styling with dark backgrounds and white text
+	•	Button styling
+	•	Error messages in red
+	•	Add loading spinner on login button
+	•	Branding:
+	•	Branded logo at the top
+	•	Animated background gradient in dark green/blue tones
+	•	Add success redirect message after login
+	•	Top Navigation Bar (Dashboard):
+	•	Dark background
+	•	Logo on the left
+	•	Page title: “Explain This Ticker”
+	•	Right side:
+	•	Search bar for ticker symbol input
+	•	User profile icon
+	•	Main Layout (Dashboard):
+	•	2-column layout on desktop, single column on mobile
+	•	Dark backgrounds for all sections
+	•	Left Column (Sidebar):
+	•	Dark background
+	•	Recently searched tickers
+	•	Favorites list
+	•	Button: “Add to Watchlist”
+	•	Right Column (Main Content):
+	•	Header showing the current ticker symbol
+	•	Tabs or sections:
+	•	Why It’s Moving Today
+	•	Retail vs Pro Sentiment
+	•	Contextual Fundamentals
+	•	Technical Analysis
+	•	Use interactive charts
+	•	All cards with dark backgrounds
+	•	Add loading skeletons
+	•	Placeholders for API data binding
+	•	Footer:
+	•	Dark background
+	•	Links in slate gray color
+	•	Color Scheme (Dark Mode):
+	•	Primary (Bullish): Green #22c55e (Tailwind text-green-500, bg-green-500)
+	•	Primary Hover: Dark Green #16a34a (Tailwind hover:bg-green-600)
+	•	Secondary (Neutral/Brand Accent): Blue #3b82f6 (Tailwind text-blue-500, bg-blue-500)
+	•	Secondary Hover: Dark Blue #2563eb (Tailwind hover:bg-blue-600)
+	•	Negative/Bearish: Red #ef4444 (Tailwind text-red-500, bg-red-500)
+	•	Neutral Text: Slate Gray #64748b (Tailwind text-slate-500)
+	•	Background: #0f172a (Tailwind bg-slate-900)
+	•	Card Backgrounds: Slate #1e293b (Tailwind bg-slate-800)
+	•	Borders: Gray #334155 (Tailwind border-slate-700)
+	•	Use these colors consistently across:
+	•	Buttons
+	•	Text highlights
+	•	Charts
+	•	Cards and panels
+	•	Hover states
+	•	Other Features:
+	•	Mobile gestures (swipe for tabs)
+	•	Notifications/toasts for API errors in dark mode
+	•	All components should export with Tailwind CSS classes for dark mode only
